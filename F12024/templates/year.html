@@ -1,0 +1,30 @@
+{%extends "layout.html"%}
+{%block content%}
+    <header>
+        <h1>Years</h1>
+        <!--Nav buttons-->
+        <nav>
+            <a href="/">Home</a>
+            <a href="/drivers">Drivers</a>
+            <a href="/teams">Teams</a>
+        </nav>
+    </header>
+    <!--Data table-->
+    <table>
+        <tr>
+            <th>Year</th>
+            <th>First</th>
+            <th>Second</th>
+            <th>Third</th>
+        </tr>
+        {% for year in results %}
+        <tr>
+            <td>{{ year[1] }}</td>
+            <td>{{ year[2] }}</td>
+            <td>{{ year[3] }}</td>
+            <td>{{ year[4] }}</td>
+        </tr>
+        {%endfor%}
+    </table>
+{%endblock%}
+

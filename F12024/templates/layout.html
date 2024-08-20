@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<title>Formula 1</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <div class="container">
+        <!--Search bar-->
+        <form action="/search">
+            <div class="search" method="POST">
+                <span class="search-icon material-symbols-outlined">search</span>
+                <input class="search-input" name="query" type="search" placeholder="Search">
+                <button type='submit'>Search</button>
+            </div>
+        </form>
+        {% block content %}
+        {% endblock %}
+        <footer>
+            <p>The Footer &copy;2024</p>
+            <p>All information is up to date as of 14/05/2024</p>
+        </footer>
+    </div>
+</body>
+</html>

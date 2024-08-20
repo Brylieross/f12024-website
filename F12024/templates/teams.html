@@ -1,0 +1,33 @@
+{%extends "layout.html"%}
+{%block content%}
+    <header>
+        <h1>Teams</h1>
+        <!--Nav buttons-->
+        <nav>
+            <a href="/">Home</a>
+            <a href="/drivers">Drivers</a>
+            <a href="/year">Years</a>
+        </nav>
+    </header>
+    <!--Data table-->
+    <table>
+        <tr>
+            <th>Team Name</th>
+            <th>Description</th>
+            <th>Time period</th>
+        </tr>
+        {% for name in results %}
+        <tr>
+            <td>{{ name[1] }}</td>
+            <td>
+                {{ name[2] }}
+                <details>
+                    <summary>Image</summary>
+                    <img src="{{ name[4] }}" alt="{{ name[4] }}">
+                </details>
+            </td>
+            <td>{{ name[3] }}</td>
+        </tr>
+        {%endfor%}
+    </table>
+{%endblock%}
